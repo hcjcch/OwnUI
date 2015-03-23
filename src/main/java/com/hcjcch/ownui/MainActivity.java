@@ -1,17 +1,29 @@
 package com.hcjcch.ownui;
 
+import android.graphics.BitmapFactory;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import com.hcjcch.ownui.ui.CircleImageDrawable;
+import com.hcjcch.ownui.ui.RoundImageDrawable;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private ImageView imageView;
+    private ImageView roundImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        imageView = (ImageView) findViewById(R.id.imageView);
+        roundImageView = (ImageView) findViewById(R.id.imageView2);
+        imageView.setImageDrawable(new CircleImageDrawable(BitmapFactory.decodeResource(getResources(), R.mipmap.huangchen)));
+        roundImageView.setImageDrawable(new RoundImageDrawable(BitmapFactory.decodeResource(getResources(), R.mipmap.huangchen), 90));
     }
 
 
