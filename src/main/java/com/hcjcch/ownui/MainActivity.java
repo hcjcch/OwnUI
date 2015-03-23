@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         imageView = (ImageView) findViewById(R.id.imageView);
         roundImageView = (ImageView) findViewById(R.id.imageView2);
-        imageView.setImageDrawable(new CircleImageDrawable(BitmapFactory.decodeResource(getResources(), R.mipmap.huangchen)));
+        imageView.setImageDrawable(new CircleImageDrawable(BitmapFactory.decodeResource(getResources(), R.mipmap.test)));
         roundImageView.setImageDrawable(new RoundImageDrawable(BitmapFactory.decodeResource(getResources(), R.mipmap.huangchen), 90));
     }
 
